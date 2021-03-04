@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moje wypożyczenia</title>
+    </head>
+    <style>
+     td {
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+          }
+    </style>
+    <body>
+        <p>Wypożycz Film<a href="/wypozycz">-></a></p>
+        <p>Zwróć Film<a href="/oddaj">-></a></p>
+        <p>Powrót na Stronę Główną<a href="/home">-></a></p>
+        <table>
+          <thead>
+            <tr>
+                <th>Data wypozyczenia</th>
+                <th>Data oddania</th>
+                <th>Film</th>
+                <th>Nazwisko klienta</th>
+            </tr>
+           </thead>
+            <tbody>
+             {% for row in rows %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

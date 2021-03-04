@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rejestracja</title>
+    </head>
+    <body>
+        <form  action ="/register " method="POST">
+            <p>Wpisz swoj e-mail i haslo:</p><br>
+
+            <div class="form-group">
+                <label>Imie:</label>
+                <input type="text" class="form-control" name="imie" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nazwisko:</label>
+                <input type="text" class="form-control" name="nazwisko" required>
+            </div>
+
+            <div class="form-group">
+                <label>PESEL:</label>
+                <input type="text" class="form-control" name="pesel" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nr telefonu:</label>
+                <input type="text" class="form-control" name="nr_tel" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" class="form-control" name="e_mail" required>
+            </div>
+
+            <div class="form-group">
+                <label>Haslo:</label>
+                <input type="password" class="form-control" name="passwd" required>
+            </div>
+
+           <div class="form-group">
+               <button type="submit" class="btn btn-primary">Zarejestruj</button>
+           </div>
+        </form>
+        <p>Powrót na Stronę Główną<a href="/home">-></a></p>
+    </body>
+</html>

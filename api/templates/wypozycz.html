@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wypożycz Film</title>
+    </head>
+    <style>
+          td {
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+          }
+    caption {
+    font-size: 50px;
+    }
+    </style>
+    <body>
+        <form  action =" " method="POST">
+            <p>Wpisz ID filmu, swoj e-mail oraz date wypozyczenia:</p><br>
+
+            <div class="form-group">
+                <label>ID filmu:</label>
+                <input type="text" class="form-control" name="fk_film" required>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="text" class="form-control" name="e_mail" required>
+            </div>
+
+            <div class="form-group">
+                <label>Data wypozyczenia:</label>
+                <input type="text" class="form-control" name="Data_wypozyczenia" required>
+            </div>
+
+            <div class="form-group">
+                <label>Data oddania:</label>
+                <input type="text" class="form-control" name="Data_oddania" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Wypozycz</button>
+            </div>
+        </form>
+        <p>Powrót na Stronę Główną<a href="/home">-></a></p>
+        <table>
+            <caption>Wszystkie Filmy</caption>
+                <thead>
+                    <tr>
+                        <th>ID filmu</th>
+                        <th>Tytul</th>
+                        <th>Rezyser</th>
+                        <th>Gatunek</th>
+                        <th>Rok produkcji</th>
+                        <th>Opis</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

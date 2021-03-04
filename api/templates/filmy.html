@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Filmy</title>
+    </head>
+    <body>
+        <style>
+         td {
+                width: 150px;
+                text-align: center;
+                border: 1px solid black;
+                padding: 5px;
+              }
+
+         caption {
+        font-size: 100px;
+        }
+        </style>
+
+        <h1>wybierz opcje: </h1>
+        <p>Sprawdz filmy z tego wieku!<a href="/filmy/opt1"> -></a>.</p>
+        <p>Sprawdz filmy za mniej niz 30.01  <a href="/filmy/opt2"> -></a>.</p>
+        <p>Sprawdz filmy Jamesa Camerona!  <a href="/filmy/opt3"> -></a>.</p>
+        <p>Sprawdz filmy George'a Lucasa! <a href="/filmy/opt4"> -></a>.</p>
+        <p>Sprawdz filmy Petera Jacksona! <a href="/filmy/opt5"> -></a>.</p>
+        <p>Powrót na Stronę Główną<a href="/home">-></a></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID filmu</th>
+                    <th>Tytul</th>
+                    <th>Rezyser</th>
+                    <th>Gatunek</th>
+                    <th>Rok produkcji</th>
+                    <th>Opis</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+             {% for row in rows %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                        <td>{{row[5]}}</td>
+                        <td>{{row[6]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

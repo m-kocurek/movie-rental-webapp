@@ -1,0 +1,26 @@
+{% block content %}
+<title>Strona Główna</title>
+<h1>Wypożyczalnia filmów</h1>
+<h3>Setki filmów na wyciągniecie ręki</h3>
+
+{% if session['imie'] %}
+<p>Zalogowany uzytkownik:  {{session['imie']}} {{session['nazwisko']}}</p>
+{% else %}
+<p>Nikt nie jest zalogowany </p>
+{% endif %}
+
+<p>Sprawdz nasze filmy<a href="/api/v1/resources/filmy/all">-></a></p>
+
+<p>Wypożycz film<a href="/wypozycz">-></a></p>
+
+<p>Zwróć film<a href="/oddaj">-></a></p>
+
+<p>Zaloguj się<a href="/login">-></a></p>
+
+<p>Rejesteracja<a href="/register">-></a></p>
+
+<p>Wyloguj się<a href="/logout">-></a></p>
+
+<p>Kontakt z wypożyczalnią<a href="contact">-></a></p>
+
+{% endblock %}

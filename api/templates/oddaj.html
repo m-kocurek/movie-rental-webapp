@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zwróć film</title>
+    </head>
+    <style>
+         td {
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+          }
+    </style>
+    <body>
+        <form  action =" " method="POST">
+            <p>Wpisz ID wypozyczenia, ktory chcesz oddac :</p><br>
+
+            <div class="form-group">
+                <label>ID wypozyczenia:</label>
+                <input type="text" class="form-control" name="wypozyczenie_ID" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Zwroc film</button>
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID wypozyczenia</th>
+                    <th>Data wypozyczenia</th>
+                    <th>Data oddania</th>
+                    <th>Film</th>
+                    <th>Nazwisko klienta</th>
+                </tr>
+            </thead>
+            <tbody>
+             {% for row in rows %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <p>Powrót na Stronę Główną<a href="/home">-></a></p>
+    </body>
+</html>
